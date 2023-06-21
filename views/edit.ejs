@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <base href="http://localhost:3003/" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Add new product</title>
+  </head>
+  <body>
+    <h2>Edit product</h2>
+    <form action="./edit" method="POST" enctype="multipart/form-data">
+      <!--  khi upload file => file bi chia nho -> phai ma hoa lai -->
+      <input
+        type="text"
+        value="<%- product.name %>"
+        name="txtName"
+        placeholder="Name"
+      />
+      <br />
+      <input
+        type="text"
+        value="<%- product.price %>"
+        name="txtPrice"
+        placeholder="Price"
+      />
+      <br />
+      <select name="txtType" id="txtType">
+        <option value="Kem">Kem</option>
+        <option value="Nuoc">Nước</option>
+        <option value="Pizza">Pizza</option>
+        <option selected="Khac" value="Khac">Khác</option>
+      </select>
+      <!-- <input type="text" name="txtType" placeholder="Type" /> -->
+      <br />
+      <input type="file" name="pruductImage" />
+      <br />
+      <img src="upload/<%- product.image%>" width="200px" alt="" />
+      <br />
+      <input type="submit" value="Edit" />
+
+      <script>
+        var temp = product.type;
+        var mySelect = document.getElementById("txtType");
+
+        for (var i, j = 0; (i = mySelect.options[j]); j++) {
+          if (i.value == temp) {
+            mySelect.selectedIndex = j;
+            break;
+          }
+        }
+      </script>
+    </form>
+  </body>
+</html>

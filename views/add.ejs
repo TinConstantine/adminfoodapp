@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Add new product</title>
+  </head>
+  <body>
+    <h2>Add new product</h2>
+    <form action="./add" method="POST" enctype="multipart/form-data">
+      <!--  khi upload file => file bi chia nho -> phai ma hoa lai -->
+      <input type="text" name="txtName" placeholder="Name" />
+      <br />
+      <input type="text" name="txtPrice" placeholder="Price" />
+      <br />
+      <select name="txtType" id="txtType">
+        <option value="Kem">Kem</option>
+        <option value="Nuoc">Nước</option>
+        <option value="Pizza">Pizza</option>
+        <option value="Khac">Khác</option>
+      </select>
+      <!-- <input type="text" name="txtType" placeholder="Type" /> -->
+      <br />
+      <input type="file" name="pruductImage" />
+      <br />
+      <input type="submit" value="Add new product" />
+    </form>
+  </body>
+</html>
