@@ -7,7 +7,7 @@ import { productRouter } from "./router/index.js";
 import cors from "cors";
 dotenv.config(); //must have
 const app = express();
-app.use(cors());
+app.use(cors({ origin: "*" }));
 app.set("view engine", "ejs");
 app.use(express.static("public")); // nguoi dung duoc xem
 app.set("views", "./views");
