@@ -65,7 +65,6 @@ async function addProduct(req, res) {
   });
 }
 
-
 // async function listProduct(req, res) {
 //   try {
 //     const getListProduct = await productRepositories.listProduct;
@@ -79,6 +78,6 @@ async function addProduct(req, res) {
 
 export default {
   addProduct,
-  updateProduct,
+
   /* listProduct*/
 };

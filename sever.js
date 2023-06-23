@@ -4,8 +4,10 @@ import product from "./model/product.js";
 import bodyParser from "body-parser";
 import connect from "./database/database.js";
 import { productRouter } from "./router/index.js";
+import cors from "cors";
 dotenv.config(); //must have
 const app = express();
+app.use(cors());
 app.set("view engine", "ejs");
 app.use(express.static("public")); // nguoi dung duoc xem
 app.set("views", "./views");
