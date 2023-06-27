@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>List product</title>
     <style>
-      .products img {
+      .products_img {
         width: 300px;
       }
       .products{
@@ -23,7 +23,7 @@
 
     <% list.forEach(function(product){%>
     <div class="products">
-      <img src="./upload/<%-product.image %>"" alt="" />
+    <div> <img class=".products_img" src="./upload/<%-product.image %>"" alt="" />
       <div class="productType"><%-product.type%></div>
       <div class="productName"><%-product.name%></div>
       <div class="productPrice"><%-product.price%></div>
@@ -34,7 +34,7 @@
           href="./delete/<%- product. _id%>"
           >Delete</a
         >
-      </div>
+      </div></div>
     </div>
     <% }); %>
   </body>
