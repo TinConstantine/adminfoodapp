@@ -5,15 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>List product</title>
     <style>
-      .products_img {
+      .products img {
         width: 300px;
       }
-      .products{
-        display: grid;
-  grid-template-columns: auto auto auto auto;
-  grid-gap: 10px;
-  padding: 10px;
-      }
+
     </style>
   </head>
   <body>
@@ -22,7 +17,7 @@
 
     <% list.forEach(function(product){%>
     <div class="products">
-    <div> <img class=".products_img" src="./upload/<%-product.image %>"" alt="" />
+<img class=".products_img" src="./upload/<%-product.image %>"" alt="" />
       <div class="productType"><%-product.type%></div>
       <div class="productName"><%-product.name%></div>
       <div class="productPrice"><%-product.price%></div>
@@ -33,7 +28,7 @@
           href="./delete/<%- product. _id%>"
           >Delete</a
         >
-      </div></div>
+ </div>
     </div>
     <% }); %>
   </body>
